@@ -84,6 +84,7 @@ ul {
 }
 
 .site-nav .link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -95,6 +96,17 @@ ul {
   letter-spacing: 0.02em;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: #2196f3;
+  border-radius: 2px;
 }
 
 .site-nav .link:hover,
@@ -199,10 +211,35 @@ ul {
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover {
   background-color: #188ce8;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 /* !стиль Наші переваги */
@@ -285,6 +322,30 @@ ul {
 
 .work-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.work-wrapper {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  padding: 27px 0;
+  margin: 0;
+  width: 370px;
+
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  color: #fff;
 }
 
 .img {
@@ -606,4 +667,39 @@ ul {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.03em;
+}
+
+/* ?======== на нижніх шести картках видно піксель оверлея ===== */
+/* !======== на нижніх шести картках видно піксель оверлея ===== */
+/* todo======== на нижніх шести картках видно піксель оверлея ===== */
+
+.overlay-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay-text {
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+.portfolio-link:hover .overlay {
+  transform: translatey(0);
 }
