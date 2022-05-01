@@ -63,11 +63,23 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="hero-btn" type="button">Заказать услугу</button>
+          <button class="hero-btn" data-modal-open type="button">Заказать услугу</button>
         </div>
 
-        <div class="backdrop">
-          <div class="modal"></div>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore quisquam maxime nihil quis temporibus
+              molestias, magni libero, recusandae laborum voluptatibus repudiandae corporis corrupti assumenda nulla
+              quas quo vitae quia adipisci suscipit iusto voluptatum, numquam eligendi in aliquam. Ipsum impedit maxime
+              cupiditate. Odit, minus. Eius sint magnam neque. Voluptates, dolorem praesentium?
+            </p>
+            <button class="modal-close" data-modal-close>
+              <svg width="14px" height="14px">
+                <use href="./images/svg/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -404,5 +416,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
