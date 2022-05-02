@@ -745,7 +745,7 @@ ul {
   color: var(--text-color-white);
 }
 
-.overlay-box:hover .overlay {
+.portfolio-link:hover .overlay {
   transform: translatey(0);
   opacity: 1;
 }
