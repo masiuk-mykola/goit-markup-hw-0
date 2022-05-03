@@ -1,7 +1,7 @@
 :root {
   /*========== Кольори ==========*/
   --primary-color: #2196f3;
-  --secondary-color: ##f5f4fa;
+  --secondary-color: #f5f4fa;
   --container-color: #f5f4fa;
   --footer-color: #2f303a;
   --text-color: #212121;
@@ -380,11 +380,13 @@ ul {
   display: block;
   bottom: 0;
   left: 0;
-  padding: 27px 0;
   margin: 0;
   width: 370px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -471,6 +473,7 @@ ul {
   height: 44px;
   color: var(--social-link-color);
   cursor: pointer;
+  border-radius: 50%;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -480,7 +483,6 @@ ul {
 .social-link:focus {
   color: var(--text-color-white);
   background-color: var(--primary-color);
-  border-radius: 50%;
 }
 
 .social-link-item:not(:last-child) {
@@ -560,10 +562,6 @@ ul {
   color: var(--text-color-white);
 }
 
-.map {
-  color: var(--text-color-white);
-}
-
 .contacts-footer .item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -583,6 +581,11 @@ ul {
 .contacts-footer:focus {
   color: var(--primary-color);
 }
+
+.map {
+  color: var(--text-color-white);
+}
+
 .adress-wrapper {
   margin-right: 70px;
 }
@@ -745,6 +748,7 @@ ul {
   color: var(--text-color-white);
 }
 
-.portfolio-link:hover .overlay {
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
   transform: translatey(-100%);
 }
